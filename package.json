@@ -1,0 +1,25 @@
+{
+  "name": "minmin-linebot",
+  "version": "1.0.0",
+  "description": "MINMIN Line bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mintmymelo/minmin-linebot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mintmymelo/minmin-linebot/issues"
+  },
+  "homepage": "https://github.com/mintmymelo/minmin-linebot#readme",
+  "dependencies": {
+    "@line/bot-sdk": "^5.0.1",
+    "backpack-core": "^0.4.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.2"
+  }
+}
