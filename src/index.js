@@ -18,6 +18,10 @@ app.post('/webhook', line.middleware(config), (req, res) => {
         .then((result) => res.json(result));
 });
 
+app.get('/', (req, res) => {
+    res.send('minmin server')
+});
+
 function handleEvent(event) {
 
     console.log(event);
