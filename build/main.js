@@ -84,8 +84,8 @@ __webpack_require__(4).config();
 var app = express();
 
 var config = {
-    channelAccessToken: "iz4jrqAaHmI4hRueYLq/inHkuUtK3GEK8+1tJ7DDLPLq4KV4lDkm61klM2o59UpF7Gx+tv5kJ+7DfJZHKfQAuS051Uw2f9JaFAJe1+z+AkuCoJ53d0TGi+8/HlAas7X055k+3Q//EoBfM1sRPts64QdB04t89/1O/w1cDnyilFU=",
-    channelSecret: "811a41c998754baaff7e2c39f6ffd20f"
+    channelAccessToken: 'iz4jrqAaHmI4hRueYLq/inHkuUtK3GEK8+1tJ7DDLPLq4KV4lDkm61klM2o59UpF7Gx+tv5kJ+7DfJZHKfQAuS051Uw2f9JaFAJe1+z+AkuCoJ53d0TGi+8/HlAas7X055k+3Q//EoBfM1sRPts64QdB04t89/1O/w1cDnyilFU=',
+    channelSecret: '811a41c998754baaff7e2c39f6ffd20f'
 };
 
 var client = new line.Client(config);
