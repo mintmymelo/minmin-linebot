@@ -1,5 +1,6 @@
 const express = require('express');
 const line = require('@line/bot-sdk');
+import geoip from "geoip-lite";
 
 require('dotenv').config();
 
