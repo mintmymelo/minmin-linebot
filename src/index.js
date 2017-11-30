@@ -23,13 +23,19 @@ app.get('/', (req, res) => {
 });
 
 function handleEvent(event) {
-
     console.log(event);
     if (event.type === 'message' && event.message.type === 'text') {
         handleMessageEvent(event);
     } else {
         return Promise.resolve(null);
     }
+}
+
+function getCurrentLocation() {
+    var geo = geoip.lookup(ip);
+    console.log('==============current location==================');
+    console.log(geo); 
+    console.log('================================================');   
 }
 
 function handleMessageEvent(event) {
@@ -47,6 +53,7 @@ function handleMessageEvent(event) {
             'previewImageUrl': 'https://images.performgroup.com/di/library/GOAL/a6/bb/fifa-18-ronaldo_lx3r88bpjpk91re36ukdgomrj.jpg?t=2027563652&w=620&h=430'
         }
     } else if (eventText === 'location' || 'อยู่ไหน') {
+        getCurrentLocation();
         msg = {
             "type": "location",
             "title": "my location",
