@@ -77,12 +77,9 @@ module.exports = __webpack_require__(1);
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_geoip_lite__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_geoip_lite___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_geoip_lite__);
 var express = __webpack_require__(2);
 var line = __webpack_require__(3);
-
+var geoip = __webpack_require__(7);
 
 __webpack_require__(4).config();
 
@@ -115,7 +112,7 @@ function handleEvent(event) {
 }
 
 function getCurrentLocation() {
-    var geo = __WEBPACK_IMPORTED_MODULE_0_geoip_lite___default.a.lookup(ip);
+    var geo = geoip.lookup(ip);
     console.log('==============current location==================');
     console.log(geo);
     console.log('================================================');
