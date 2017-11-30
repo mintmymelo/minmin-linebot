@@ -33,12 +33,14 @@ function handleEvent(event) {
 }
 
 function getCurrentLocation() {
-    var ip = req.ip;
-    var geo = geoip.lookup(ip);
-    console.log('==============current location==================');
-    console.log(ip); 
-    console.log(geo); 
-    console.log('================================================');   
+    app.get('/', (req, res) => {
+        var ip = req.ip;
+        var geo = geoip.lookup(ip);
+        console.log('==============current location==================');
+        console.log(ip); 
+        console.log(geo); 
+        console.log('================================================');  
+    }); 
 }
 
 function handleMessageEvent(event) {
