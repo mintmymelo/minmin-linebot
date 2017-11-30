@@ -5,18 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "backpack"
+    "dev": "backpack",
+    "start": "node src/index.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mintmymelo/minmin-linebot.git"
-  },
-  "author": "",
+  "keywords": [
+    "example",
+    "heroku"
+  ],
+  "author": "MAMECHIATO",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/mintmymelo/minmin-linebot/issues"
-  },
-  "homepage": "https://github.com/mintmymelo/minmin-linebot#readme",
   "dependencies": {
     "@line/bot-sdk": "^5.0.1",
     "backpack-core": "^0.4.3",
