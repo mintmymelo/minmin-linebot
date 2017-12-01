@@ -13,14 +13,26 @@ const config = {
 
 const client = new line.Client(config);
 
+const userIPAddress = '::1';
+
 app.post('/webhook', line.middleware(config), (req, res) => {
+    var ip = (req.headers['x-forwarded-for'] ||
+    req.connection.remoteAddress ||
+    req.socket.remoteAddress ||
+    req.connection.socket.remoteAddress).split(",")[0];
+
     Promise
         .all(req.body.events.map(handleEvent))
         .then((result) => res.json(result));
 });
 
 app.get('/', (req, res) => {
-    res.send('minmin server')
+    // var ip = (req.headers['x-forwarded-for'] ||
+    // req.connection.remoteAddress ||
+    // req.socket.remoteAddress ||
+    // req.connection.socket.remoteAddress).split(",")[0];
+    // res.send(ip)
+    res.send('minmin bot')
 });
 
 function handleEvent(event) {
@@ -33,14 +45,9 @@ function handleEvent(event) {
 }
 
 function getCurrentLocation() {
-    app.get('/', (req, res) => {
-        var ip = req.ip;
-        var geo = geoip.lookup(ip);
-        console.log('==============current location==================');
-        console.log(ip); 
-        console.log(geo); 
-        console.log('================================================');  
-    }); 
+    console.log('==============current location==================');
+    console.log(userIPAddress);  
+    console.log('================================================');  
 }
 
 function handleMessageEvent(event) {
